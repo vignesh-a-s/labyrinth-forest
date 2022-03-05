@@ -2,6 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import style
 
+"""
+This class contains a list of useful helper functions which can assist the major classes with
+tasks like array transformations, graph display, etc.
+"""
 class Utilities():
 
     """
@@ -135,11 +139,24 @@ class Utilities():
                 return True
         return False
     
-    def display_graph(x_data, y_data, x_label='X-Axis', y_label='Y-Axis', title='Custom Graph'):
+    """
+    Displays a 2D Plot with given data and label parameters
+    """
+    def display_graph(x_data, y_data, x_label='X-Axis', y_label='Y-Axis', title='Custom Graph', show_average=False):
         style.use("ggplot")
-        plt.plot(x_data, y_data)
+
+        plt.plot(x_data, y_data, label="Individual values")
         plt.title(title, fontsize=18)
+
+        if show_average:
+            avg_val = sum(y_data)/len(y_data)
+            x_avg_data = x_data
+            y_avg_data = [avg_val for i in range(len(x_avg_data))]
+            plt.plot(x_avg_data, y_avg_data, label="Average value")
+            plt.legend()
+        
         plt.xlabel(x_label, fontsize=14)
         plt.ylabel(y_label, fontsize=14)
+
         plt.show()
     
