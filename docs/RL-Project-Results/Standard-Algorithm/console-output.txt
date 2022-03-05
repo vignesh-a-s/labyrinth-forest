@@ -1,10 +1,10 @@
 ==============
 Algorithm: Standard (Random Search)
 ==============
-Total no. of episodes: 1000 | Total no. of steps: 10000
+Total no. of episodes: 10 | Total no. of steps: 10000
 ==============
 ==============
-Average reward: 72.25
-Average no. of deforested areas found: 5.29 (out of 8)
-Average total no. of steps: 3386.39 (out of 10000)
+Average reward: 86.65
+Average no. of deforested areas found: 5.4 (out of 8)
+Average total no. of steps: 3999.2 (out of 10000)
 ==============
